@@ -1,6 +1,38 @@
-$(function() {
-  /*
-  var questions = [{
+$(document).ready(function() {
+  // Objects!
+  var quiz = {
+    currentQuestionIndex: 0,
+    questionElement: $('#question-p'),
+    choicesElement: $('ul.choices'),
+    resultsElement: $('#results'),
+    load: function() {
+      this.showQuestion();
+    },
+    evaluateChoice: function(selectedAnswer) {
+      var question = this.questions[this.currentQuestionIndex];
+      if (selectedAnswer === question.answer) {
+        this.resultsElement.text('correct!');
+      } else {
+        this.resultsElement.text('FAIL');
+      }
+    },
+    showQuestion: function() {
+      var question = this.questions[this.currentQuestionIndex];
+      this.questionElement.text(question.question);
+      for (var i = 0; i < question.choices.length; i++) {
+        $('li[data-choice-number="'+i+'"]', this.choicesElement).text(question.choices[i]);
+      }
+    },
+    moveForward: function() {
+      var totalQuestions = quiz.questions.length;
+      this.currentQuestionIndex++;
+      if (this.currentQuestionIndex > totalQuestions-1) {
+        this.currentQuestionIndex = 0;
+      }
+      this.showQuestion();
+    }
+  };
+  quiz.questions = [{
     // Q1
       question: "三",
       choices: ["に", "さん", "ろく", "じゅう"],
@@ -60,23 +92,22 @@ $(function() {
       choices: ["し　よん", "ろく", "いち", "さん"],
       answer: 1
     }];
-  });
-  */
 
-  function hide() {
-    $(this).css("display", "none");
-  }
-
-  function show() {
-    $(this).css("display", "inline");
-  }
-
-  $(document).ready(function() {
+    // Events!
     $("#start").click(function() {
       $(this).hide();
       $("#intro-container").hide();
-      $("#question-1").show();
+      $("#question").show();
       $("#progress-bar").show();
+      quiz.load();
     });
-  });
+
+    $('ul.choices li').click(function() {
+      var choiceNumber = $(this).data('choice-number');
+      quiz.evaluateChoice(choiceNumber);
+      quiz.moveForward();
+    })
+
+
+
 });

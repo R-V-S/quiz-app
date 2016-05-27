@@ -17,168 +17,22 @@
     <div id="intro-container" class="question-container intro">
       <h3 class="subtitle-text">This short quiz will test your ability to read and count the numbers 1 through 10 in Japanese; good luck!</h3>
     </div>
-    <ul class="col-1-2 answers center">
-      <li id="start"><a href="#">Start</a></li>
+    <ul class="col-1-2 center">
+      <li id="start" class="button">Start</li>
     </ul>
     <!-- Question 1 -->
     <!-- TODO: hide after testing -->
-    <div id="question-1" class="question-container hide">
+    <div id="question" class="question-container hide">
       <!-- Question image -->
       <div class="col-1-2 question-char">
-        <p>
-          三
-        </p>
+        <p id="question-p"></p>
       </div>
       <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li><a href="#">に</a></li>
-        <li><a href="#">さん</a></li>
-        <li><a href="#">ろく</a></li>
-        <li><a href="#">じゅう</a></li>
-      </ul>
-    </div>
-    <!-- Question 2 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          四
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>し　よん</li>
-        <li>いち</li>
-        <li>なな　しち</li>
-        <li>ご</li>
-      </ul>
-    </div>
-    <!-- Question 3 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          九
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>はち</li>
-        <li>ろく</li>
-        <li>さん</li>
-        <li>きゅう　く</li>
-      </ul>
-    </div>
-    <!-- Question 4 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          七
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>いち</li>
-        <li>し　よん</li>
-        <li>じゅう</li>
-        <li>なな　しち</li>
-      </ul>
-    </div>
-    <!-- Question 5 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          一
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>いち</li>
-        <li>ろく</li>
-        <li>はち</li>
-        <li>ご</li>
-      </ul>
-    </div>
-    <!-- Question 6 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          十
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>さん</li>
-        <li>じゅう</li>
-        <li>きゅう　く</li>
-        <li>に</li>
-      </ul>
-    </div>
-    <!-- Question 7 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          八
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>し　よん</li>
-        <li>ろく</li>
-        <li>はち</li>
-        <li>いち</li>
-      </ul>
-    </div>
-    <!-- Question 8 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          二
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>に</li>
-        <li>ご</li>
-        <li>さん</li>
-        <li>きゅう　く</li>
-      </ul>
-    </div>
-    <!-- Question 9 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          五
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>ろく</li>
-        <li>なな　しち</li>
-        <li>ご</li>
-        <li>じゅう</li>
-      </ul>
-    </div>
-    <!-- Question 10 -->
-    <div class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p>
-          六
-        </p>
-      </div>
-      <!-- Answers -->
-      <ul class="col-1-2 answers">
-        <li>し　よん</li>
-        <li>ろく</li>
-        <li>いち</li>
-        <li>さん</li>
+      <ul class="col-1-2 choices">
+        <li class="button" data-choice-number="0"></li>
+        <li class="button" data-choice-number="1"></li>
+        <li class="button" data-choice-number="2"></li>
+        <li class="button" data-choice-number="3"></li>
       </ul>
     </div>
     <!-- Progress bar -->
@@ -187,7 +41,7 @@
       </div>
     </div>
     <!-- Quiz results -->
-    <div class="results-container question-container hide">
+    <div class="results-container question-container">
       <div id="results">
         <p>
           results lol
@@ -195,7 +49,7 @@
       </div>
     </div>
   </div>
-  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

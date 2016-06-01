@@ -47,16 +47,27 @@ body {
 }
 
 .hide {
-  display:none;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+#question-box,
+#intro-container {
+  transition: opacity 0.2s ease;
 }
 
 /* Subtitle text */
-.subtitle-text {
+.subtitle-text,
+.results-text {
   margin: 0;
   position: absolute;
   top: 46.2%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  text-transform: lowercase;
 }
 
 /* 1/2 .main-container width column */
@@ -72,6 +83,7 @@ body {
 
 /* Centers 'start' button */
 .center {
+  padding: 0;
   position: absolute;
   top: 71.7%;
   left: 25%;
@@ -87,7 +99,7 @@ body {
   border-radius: 4px;
 }
 
-/* Hiragana choices */
+/* Hiragana answers */
 .choices {
   list-style: none;
   text-align: center;
@@ -97,37 +109,30 @@ body {
 }
 
 .button {
-  padding: 0;
+  padding: 2.5% 3%;
   margin: 2.2% 0;
   font-size: 2.45em;
   border-radius: 4px;
+  color: #fff;
   background-color: #7F7F7F;
   box-shadow: 0 3px 0 #4F4F4D;
-  /*
-  background-color: #FFD644;
-  box-shadow: 0 3px 0 #CCAB37;
-  */
   transition: all linear 0.15s;
   text-decoration: none;
   display: block;
-  padding: 2.5% 3%;
-  color: #fff;
+  text-transform: lowercase;
 }
 
 .button:hover {
-  background-color: #C4C4C4;
-  /*
-  background-color: #FFE790;
-  */
-  transition: all linear 0.15s;
   color: #4F4F4D;
+  background-color: #C4C4C4;
+  transition: all linear 0.15s;
   cursor: pointer;
 }
 
 .button:active {
   transform: translate(0, 3px);
   box-shadow: none;
-  transition: all linear 0.09s
+  transition: all linear 0.09s;
 }
 
 /* Full .main-container width column */
@@ -146,12 +151,26 @@ body {
 .progress {
   display: block;
   border-radius: 3px;
-  /* background-color: green; */
+  background-color: #7F7F7F;
   height: 100%;
-  width: 10%;
+  width: 0;
 }
 
 /* Quiz results */
 .results-container {
   text-align: center;
+}
+
+/* Test variables */
+
+.win,
+.win:hover {
+  background-color: #698C69;
+  color: #fff;
+}
+
+.fail,
+.fail:hover {
+  background-color: #E58E89;
+  color: #fff;
 }

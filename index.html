@@ -13,41 +13,46 @@
     <header>
       <h1 class="title-text">Can You Count to 10 in Japanese?</h1>
     </header>
-    <!-- Quiz section -->
-    <div id="intro-container" class="question-container intro">
-      <h3 class="subtitle-text">This short quiz will test your ability to read and count the numbers 1 through 10 in Japanese; good luck!</h3>
-    </div>
-    <ul class="col-1-2 center">
-      <li id="start" class="button">Start</li>
-    </ul>
-    <!-- Question 1 -->
-    <!-- TODO: hide after testing -->
-    <div id="question" class="question-container hide">
-      <!-- Question image -->
-      <div class="col-1-2 question-char">
-        <p id="question-p"></p>
+    <!-- Intro section -->
+    <section id="intro" class="page">
+      <div id="intro-container" class="question-container intro">
+        <h3 class="subtitle-text">This short quiz will test your ability to read and count the numbers 1 through 10 in Japanese; good luck!</h3>
       </div>
-      <!-- Answers -->
-      <ul class="col-1-2 choices">
-        <li class="button" data-choice-number="0"></li>
-        <li class="button" data-choice-number="1"></li>
-        <li class="button" data-choice-number="2"></li>
-        <li class="button" data-choice-number="3"></li>
+      <ul class="col-1-2 center">
+        <li id="start" class="button">Start</li>
       </ul>
-    </div>
-    <!-- Progress bar -->
-    <div id="progress-bar" class="col-1-1 progress-tracker hide">
-      <div class="progress">
+    </section>
+    <!-- Question section -->
+    <section id="question" class="page">
+      <div id="question-box" class="question-container">
+        <!-- Question image -->
+        <div class="col-1-2 question-char">
+          <p id="question-p">
+          </p>
+        </div>
+        <!-- Answers -->
+        <ul class="col-1-2 choices">
+          <li class="button" data-choice="0"></li>
+          <li class="button" data-choice="1"></li>
+          <li class="button" data-choice="2"></li>
+          <li class="button" data-choice="3"></li>
+        </ul>
       </div>
-    </div>
+      <!-- Progress bar -->
+      <div id="progress-bar" class="col-1-1 progress-tracker">
+        <div class="progress">
+        </div>
+      </div>
+    </section>
     <!-- Quiz results -->
-    <div class="results-container question-container">
-      <div id="results">
-        <p>
-          results lol
-        </p>
+    <section id="results" class="page">
+      <div id="results" class="question-container">
+          <h3 class="results-text"></h3>
+          <ul class="col-1-2 center">
+            <li id="new-game" class="button">New Game</li>
+          </ul>
       </div>
-    </div>
+    </section>
   </div>
   <script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
